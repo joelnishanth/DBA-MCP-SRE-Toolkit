@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  background: #ffffff !important;
+  min-height: 100vh;
+  color: #1a1a1a !important;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  background: #ffffff !important;
+  min-height: 100vh;
+}
+
+/* Force override any existing glass/purple styles */
+.glass {
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+}
+
+/* Remove any purple/gradient backgrounds */
+main, div, section, nav {
+  background: inherit !important;
+}
+
+main {
+  background: #ffffff !important;
+}
+
+/* Ensure clean button styling */
+button {
+  font-family: inherit;
+}
+
+/* Clean input styling */
+input, select, textarea {
+  font-family: inherit;
+}
+
+/* Ensure proper text contrast */
+h1, h2, h3, h4, h5, h6 {
+  color: #1a1a1a !important;
+}
+
+p {
+  color: #4a5568 !important;
+}
+
+/* Override any existing purple/gradient styles */
+[style*="background"] {
+  background: #ffffff !important;
+}
+
+/* Ensure navigation is clean */
+nav {
+  background: #ffffff !important;
+  border-bottom: 1px solid #e5e7eb !important;
+}
+
+/* Clean native scrollbars for better UX */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(241, 245, 249, 0.5);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(156, 163, 175, 0.7);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(107, 114, 128, 0.8);
+}/* 
+Line clamp utility for text truncation */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Enhanced scrollbar for larger chat areas */
+.overflow-y-auto::-webkit-scrollbar {
+  width: 10px;
+}
+
+.overflow-y-auto::-webkit-scrollbar-track {
+  background: rgba(241, 245, 249, 0.3);
+  border-radius: 5px;
+}
+
+.overflow-y-auto::-webkit-scrollbar-thumb {
+  background: rgba(156, 163, 175, 0.6);
+  border-radius: 5px;
+}
+
+.overflow-y-auto::-webkit-scrollbar-thumb:hover {
+  background: rgba(107, 114, 128, 0.8);
+}/* Fix 
+text selection color to be black */
+::selection {
+  background-color: rgba(0, 0, 0, 0.1);
+  color: #000000;
+}
+
+::-moz-selection {
+  background-color: rgba(0, 0, 0, 0.1);
+  color: #000000;
+}
+
+/* Specifically for chat messages */
+.whitespace-pre-wrap::selection {
+  background-color: rgba(0, 0, 0, 0.15);
+  color: #000000;
+}
+
+.whitespace-pre-wrap::-moz-selection {
+  background-color: rgba(0, 0, 0, 0.15);
+  color: #000000;
+}/
+* Force all chat message text to be black */
+.whitespace-pre-wrap {
+  color: #000000 !important;
+}
+
+/* Ensure all text in chat bubbles is black */
+.rounded-2xl .whitespace-pre-wrap {
+  color: #000000 !important;
+}

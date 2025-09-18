@@ -1,0 +1,174 @@
+/* Immediate override to fix purple background and cramped layout */
+html, body, #root, * {
+  background: #ffffff !important;
+  background-image: none !important;
+  background-color: #ffffff !important;
+}
+
+/* Force override any gradient backgrounds */
+*[style*="background"], *[style*="linear-gradient"], *[style*="gradient"] {
+  background: #ffffff !important;
+  background-image: none !important;
+}
+
+/* Override any purple/blue gradient styles */
+*[class*="bg-"], *[style*="667eea"], *[style*="764ba2"] {
+  background: #ffffff !important;
+  background-image: none !important;
+}
+
+/* Override any purple/gradient backgrounds */
+* {
+  background: inherit !important;
+}
+
+main {
+  background: #ffffff !important;
+  background-image: none !important;
+}
+
+/* Fix navigation */
+nav {
+  background: #ffffff !important;
+  background-image: none !important;
+  border-bottom: 1px solid #e5e7eb !important;
+  padding: 1.5rem 2rem !important;
+}
+
+nav h1 {
+  color: #1f2937 !important;
+  font-size: 1.5rem !important;
+  font-weight: 600 !important;
+  margin-bottom: 1.5rem !important;
+}
+
+nav div {
+  display: flex !important;
+  gap: 2rem !important;
+  flex-wrap: wrap !important;
+}
+
+nav a {
+  color: #6b7280 !important;
+  text-decoration: none !important;
+  font-size: 0.875rem !important;
+  font-weight: 500 !important;
+  transition: color 0.2s ease !important;
+}
+
+nav a:hover {
+  color: #1f2937 !important;
+}
+
+/* Fix main content area */
+main {
+  max-width: 64rem !important;
+  margin: 0 auto !important;
+  padding: 4rem 2rem !important;
+}
+
+/* Fix text colors */
+h1, h2, h3, h4, h5, h6 {
+  color: #1f2937 !important;
+}
+
+p {
+  color: #6b7280 !important;
+}
+
+/* Fix form elements */
+select, input, textarea {
+  background: #ffffff !important;
+  border: 1px solid #d1d5db !important;
+  border-radius: 0.5rem !important;
+  padding: 0.75rem 1rem !important;
+  color: #1f2937 !important;
+}
+
+/* Fix buttons to match OpenAI FM style */
+button {
+  background: #f3f4f6 !important;
+  border: 1px solid #d1d5db !important;
+  border-radius: 0.75rem !important;
+  padding: 0.75rem 1.5rem !important;
+  color: #1f2937 !important;
+  font-weight: 500 !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05) !important;
+}
+
+button:hover {
+  background: #e5e7eb !important;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1) !important;
+}
+
+button[data-color="primary"] {
+  background: #f97316 !important;
+  color: #ffffff !important;
+  border-color: #f97316 !important;
+}
+
+button[data-color="primary"]:hover {
+  background: #ea580c !important;
+  border-color: #ea580c !important;
+}
+
+/* Fix spacing */
+.mb-10 {
+  margin-bottom: 4rem !important;
+}
+
+.gap-3 {
+  gap: 1rem !important;
+}
+
+.gap-4 {
+  gap: 1.5rem !important;
+}
+
+.p-6 {
+  padding: 2rem !important;
+}
+
+/* Fix containers */
+div[class*="bg-white/"] {
+  background: #f9fafb !important;
+  border: 1px solid #e5e7eb !important;
+  border-radius: 0.5rem !important;
+}
+
+/* Fix code blocks */
+pre {
+  background: #1f2937 !important;
+  color: #f9fafb !important;
+  padding: 1rem !important;
+  border-radius: 0.5rem !important;
+  font-family: 'SF Mono', Monaco, Consolas, monospace !important;
+}
+
+/* Fix tables */
+table {
+  background: #ffffff !important;
+  border: 1px solid #e5e7eb !important;
+  border-radius: 0.5rem !important;
+  overflow: hidden !important;
+}
+
+th {
+  background: #f9fafb !important;
+  color: #1f2937 !important;
+  font-weight: 600 !important;
+  padding: 1rem !important;
+  border-bottom: 1px solid #e5e7eb !important;
+}
+
+td {
+  color: #6b7280 !important;
+  padding: 1rem !important;
+  border-bottom: 1px solid #f3f4f6 !important;
+}
+
+tr:hover {
+  background: #f9fafb !important;
+}

@@ -1,0 +1,307 @@
+/* Complete CSS reset and clean styling to match OpenAI FM */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  background: #f8f9fa !important;
+  background-image: none !important;
+  color: #1a1a1a !important;
+  line-height: 1.6;
+  min-height: 100vh;
+  font-size: 22.4px !important;
+}
+
+/* Force override any existing purple/gradient styles */
+* {
+  background-image: none !important;
+}
+
+*[style*="linear-gradient"], *[style*="gradient"], *[class*="bg-"] {
+  background: #f8f9fa !important;
+  background-image: none !important;
+}
+
+/* Navigation styling to match OpenAI FM */
+nav {
+  background: #ffffff !important;
+  border-bottom: 1px solid #e5e7eb !important;
+  padding: 1.5rem 2rem !important;
+}
+
+nav h1 {
+  color: #1f2937 !important;
+  font-size: 2.1rem !important;
+  font-weight: 600 !important;
+  margin-bottom: 1.5rem !important;
+}
+
+nav div {
+  display: flex !important;
+  gap: 2rem !important;
+  flex-wrap: wrap !important;
+}
+
+nav a {
+  color: #6b7280 !important;
+  text-decoration: none !important;
+  font-size: 1.225rem !important;
+  font-weight: 500 !important;
+  transition: color 0.2s ease !important;
+}
+
+nav a:hover {
+  color: #1f2937 !important;
+}
+
+/* Main content styling */
+main {
+  background: #f8f9fa !important;
+  max-width: 64rem !important;
+  margin: 0 auto !important;
+  padding: 4rem 2rem !important;
+}
+
+/* Block component styling */
+.block-container {
+  margin-bottom: 4rem !important;
+}
+
+.block-header {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  margin-bottom: 2rem !important;
+}
+
+.block-title {
+  font-size: 0.875rem !important;
+  font-weight: 500 !important;
+  color: #6b7280 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+}
+
+.block-divider {
+  flex: 1 !important;
+  height: 1px !important;
+  background: #e5e7eb !important;
+  margin: 0 1.5rem !important;
+}
+
+.block-tabs {
+  display: flex !important;
+  gap: 1.5rem !important;
+}
+
+.block-tab {
+  font-size: 0.875rem !important;
+  color: #6b7280 !important;
+  background: none !important;
+  border: none !important;
+  cursor: pointer !important;
+  transition: color 0.2s ease !important;
+  padding: 0.25rem 0 !important;
+}
+
+.block-tab:hover {
+  color: #1f2937 !important;
+}
+
+.block-tab.active {
+  color: #1f2937 !important;
+  font-weight: 500 !important;
+}
+
+.block-content {
+  padding-top: 1rem !important;
+}
+
+/* Button styling to match OpenAI FM */
+button {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 0.5rem !important;
+  padding: 0.75rem 1.5rem !important;
+  border-radius: 0.75rem !important;
+  font-weight: 500 !important;
+  font-size: 1.225rem !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+  border: 1px solid #d1d5db !important;
+  background: #ffffff !important;
+  color: #374151 !important;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05) !important;
+}
+
+button:hover {
+  background: #f9fafb !important;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1) !important;
+}
+
+button:disabled {
+  opacity: 0.5 !important;
+  cursor: not-allowed !important;
+}
+
+/* Primary button styling */
+button[data-color="primary"], .btn-primary {
+  background: #f97316 !important;
+  color: #ffffff !important;
+  border-color: #f97316 !important;
+}
+
+button[data-color="primary"]:hover, .btn-primary:hover {
+  background: #ea580c !important;
+  border-color: #ea580c !important;
+}
+
+/* Form elements */
+input, select, textarea {
+  padding: 0.75rem 1rem !important;
+  border: 1px solid #d1d5db !important;
+  border-radius: 0.5rem !important;
+  background: #ffffff !important;
+  color: #1f2937 !important;
+  font-size: 1.225rem !important;
+  transition: border-color 0.2s ease !important;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none !important;
+  border-color: #f97316 !important;
+  box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.1) !important;
+}
+
+/* Card styling */
+.card, .glass {
+  background: #ffffff !important;
+  border: 1px solid #e5e7eb !important;
+  border-radius: 0.75rem !important;
+  padding: 2rem !important;
+  margin-bottom: 2rem !important;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Table styling */
+table {
+  width: 100% !important;
+  background: #ffffff !important;
+  border: 1px solid #e5e7eb !important;
+  border-radius: 0.5rem !important;
+  overflow: hidden !important;
+}
+
+th {
+  background: #f9fafb !important;
+  color: #1f2937 !important;
+  font-weight: 600 !important;
+  padding: 1rem !important;
+  text-align: left !important;
+  border-bottom: 1px solid #e5e7eb !important;
+}
+
+td {
+  padding: 1rem !important;
+  color: #6b7280 !important;
+  border-bottom: 1px solid #f3f4f6 !important;
+}
+
+tr:hover {
+  background: #f9fafb !important;
+}
+
+/* Code blocks */
+pre, code {
+  background: #1f2937 !important;
+  color: #000000 !important;
+  padding: 1rem !important;
+  border-radius: 0.5rem !important;
+  font-family: SF Mono, Monaco, Consolas, monospace !important;
+  font-size: 0.875rem !important;
+  overflow-x: auto !important;
+}
+
+/* Text styling */
+h1, h2, h3, h4, h5, h6 {
+  color: #1f2937 !important;
+  font-weight: 600 !important;
+  margin-bottom: 1rem !important;
+}
+
+h1 { font-size: 2.8rem !important; }
+h2 { font-size: 2.1rem !important; }
+h3 { font-size: 1.75rem !important; }
+h4 { font-size: 1.575rem !important; }
+
+p {
+  color: #6b7280 !important;
+  margin-bottom: 1rem !important;
+  line-height: 1.6 !important;
+  font-size: 1.4rem !important;
+}
+
+/* Spacing utilities */
+.space-y-4 > * + * { margin-top: 1rem !important; }
+.space-y-6 > * + * { margin-top: 1.5rem !important; }
+.space-y-8 > * + * { margin-top: 2rem !important; }
+
+.gap-4 { gap: 1rem !important; }
+.gap-6 { gap: 1.5rem !important; }
+
+.mb-4 { margin-bottom: 1rem !important; }
+.mb-6 { margin-bottom: 1.5rem !important; }
+.mb-8 { margin-bottom: 2rem !important; }
+
+.p-4 { padding: 1rem !important; }
+.p-6 { padding: 1.5rem !important; }
+
+/* Grid layouts */
+.grid { display: grid !important; }
+.grid-cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)) !important; }
+.grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+.grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)) !important; }
+
+@media (min-width: 768px) {
+  .md\\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+  .md\\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)) !important; }
+}
+
+@media (min-width: 1024px) {
+  .lg\\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)) !important; }
+  .lg\\:grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)) !important; }
+}
+
+/* Status colors */
+.text-green-600 { color: #16a34a !important; }
+.text-red-500 { color: #ef4444 !important; }
+.text-amber-600 { color: #d97706 !important; }
+.text-blue-600 { color: #2563eb !important; }
+
+.bg-green-50 { background: #f0fdf4 !important; }
+.bg-red-50 { background: #fef2f2 !important; }
+.bg-blue-50 { background: #eff6ff !important; }
+.bg-gray-50 { background: #f9fafb !important; }
+
+/* Responsive design */
+@media (max-width: 768px) {
+  main {
+    padding: 2rem 1rem !important;
+  }
+  
+  nav {
+    padding: 1rem !important;
+  }
+  
+  nav div {
+    gap: 1rem !important;
+  }
+  
+  .card, .glass {
+    padding: 1.5rem !important;
+  }
+}
