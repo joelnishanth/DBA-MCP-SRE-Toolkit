@@ -1,93 +1,94 @@
 # SRE GenAI Platform
 
-A comprehensive AI-powered Site Reliability Engineering platform with multi-agent systems, database provisioning, and infrastructure management capabilities using AWS Strands Agents and Model Context Protocol (MCP).
+The SRE GenAI Platform provides an AI-enabled Site Reliability Engineering environment that unifies infrastructure automation, multi-agent diagnostics, and database provisioning under a single workflow. It is built around AWS Strands Agents, Anthropic Claude models, and the Model Context Protocol (MCP) to streamline incident response, performance analysis, and cloud cost management.
 
-## 🚀 Quick Start
+## Problem This Project Solves
+Modern SRE teams operate complex hybrid environments that require rapid incident triage, accurate database provisioning decisions, and continuous visibility into infrastructure costs. Manual triage and ad-hoc tooling create delays and knowledge gaps. This platform consolidates diagnostics, remediation planning, and resource insights into a consistent experience powered by AI agents, reducing mean time to resolution and improving operational decision making.
+
+## Quick Start
 
 ### Development Environment
 ```bash
-# Start development environment (returns terminal control)
+# Start the development environment (returns terminal control)
 ./dev-local.sh
 
-# Stop all services
+# Stop all services when finished
 ./stop-dev.sh
 ```
 
-**What `./dev-local.sh` does:**
-- ✅ Validates AWS credentials for AI features
-- 🐳 Starts backend services in Docker containers
-- 🔥 Starts frontend locally with hot reloading
-- ⏳ Waits for all services to be ready
-- 🎯 Returns terminal control while services run in background
-- 💡 Frontend automatically updates when you make changes
+**What `./dev-local.sh` does**
+- Validates AWS credentials for AI capabilities
+- Starts backend services in Docker containers
+- Launches the frontend with hot reloading
+- Waits for all services to become available
+- Returns terminal control while services continue to run
+- Enables automatic frontend updates during development
 
 ### Access Points
-- **Main UI**: http://localhost:3000 (development with hot reloading)
-- **MCP Server**: http://localhost:5001
-- **Bot Core API**: http://localhost:6000
-- **AWS Inventory Service**: http://localhost:5002
-- **Unified Claude Service**: http://localhost:7000
+- Main UI: http://localhost:3000
+- MCP Server: http://localhost:5001
+- Bot Core API: http://localhost:6000
+- AWS Inventory Service: http://localhost:5002
+- Unified Claude Service: http://localhost:7000
 
-## 🏗️ Architecture
+## Architecture Overview
 
 ### Core Services
-- **Liquid Glass UI** - Modern React frontend with glass morphism design
-- **MCP Server** - Model Context Protocol server with database and container management
-- **Bot Core** - AI diagnostics and NLP query processing
-- **AWS Inventory Service** - Cloud resource management and cost analysis
-- **Unified Claude Service** - Consolidated AI endpoints using AWS Bedrock
+- **Liquid Glass UI** – React frontend with a glassmorphism design system
+- **MCP Server** – Model Context Protocol server for database and container management
+- **Bot Core** – AI diagnostics and natural language processing services
+- **AWS Inventory Service** – Cloud resource management and cost analytics
+- **Unified Claude Service** – Consolidated interface to Anthropic Claude models via AWS Bedrock
 
 ### Technology Stack
 
 #### Frontend
-- **React 18** with TypeScript for type safety
-- **Vite** as build tool and dev server for fast development
-- **Tailwind CSS** for styling with glass morphism design
-- **React Router** for navigation
-- **Axios** for API communication
+- React 18 with TypeScript
+- Vite for development and build tooling
+- Tailwind CSS for styling
+- React Router for routing
+- Axios for API communication
 
 #### Backend
-- **FastAPI** (Python) for REST APIs
-- **Docker** and Docker Compose for containerization
-- **AWS Strands Agents** for model-driven AI agent orchestration
-- **Model Context Protocol (MCP)** for AI tool integration
+- FastAPI for REST services
+- Docker and Docker Compose for container orchestration
+- AWS Strands Agents for model-driven AI workflows
+- Model Context Protocol for tool integration
 
 #### Databases
-- **PostgreSQL** (primary database)
-- **MySQL** (secondary database)  
-- **SQLite** (lightweight database)
+- PostgreSQL (primary relational database)
+- MySQL (secondary relational database)
+- SQLite (lightweight embedded database)
 
-#### AI/ML Integration
-- **AWS Bedrock** with Claude AI for diagnostics and analysis
-- **AWS Strands SDK** for agent-based workflows
-- **Model Context Protocol** for standardized AI tool access
+#### AI and Machine Learning
+- AWS Bedrock with Anthropic Claude models
+- AWS Strands SDK for multi-agent coordination
+- MCP-based adapters for standardized AI access
 
 ### Multi-Agent Systems
-- **AWS Strands Agents** - Model-driven approach with LLM reasoning
-- **Database Management** - Multi-database query and analysis agents
-- **Container Diagnostics** - AI-powered infrastructure monitoring
-- **Cost Analysis** - Intelligent resource optimization recommendations
+- **AWS Strands Agents** – Model-driven reasoning for SQL provisioning
+- **Database Management Agents** – Multi-database query and performance analysis
+- **Container Diagnostics Agents** – Infrastructure monitoring and remediation planning
+- **Cost Analysis Agents** – Optimization recommendations for cloud spending
 
-## 📚 Documentation
+## Documentation
+Key documentation is located in the `docs` directory:
+- [AWS Bedrock Setup](docs/AWS_BEDROCK_SETUP.md)
+- [AWS Strands Architecture](docs/AWS_STRANDS_ARCHITECTURE.md)
+- [NoSQL Onboarding Demo](docs/NOSQL_ONBOARDING_DEMO.md)
+- [Agent Core Demo](docs/AWS_AGENT_CORE_DEMO.md)
+- [Development Guide](docs/DEVELOPMENT.md)
+- [Testing Guide](docs/TESTING_GUIDE.md)
+- [Troubleshooting](docs/DEV_LOCAL_TROUBLESHOOTING.md)
 
-Essential documentation is located in the `/docs` folder:
-
-- [AWS Bedrock Setup](docs/AWS_BEDROCK_SETUP.md) - Configure AI integration
-- [AWS Strands Architecture](docs/AWS_STRANDS_ARCHITECTURE.md) - Multi-agent SQL provisioning
-- [NoSQL Onboarding Demo](docs/NOSQL_ONBOARDING_DEMO.md) - NoSQL database selection
-- [Agent Core Demo](docs/AWS_AGENT_CORE_DEMO.md) - Incident response system
-- [Development Guide](docs/DEVELOPMENT.md) - Development setup and practices
-- [Testing Guide](docs/TESTING_GUIDE.md) - Testing procedures and scripts
-- [Troubleshooting](docs/DEV_LOCAL_TROUBLESHOOTING.md) - Common issues and solutions
-
-## 🧪 Testing
+## Testing
 
 ### Test Scripts
 ```bash
-# Test deployment setup
+# Validate deployment prerequisites
 ./test-deployment.sh
 
-# Test backend connections
+# Verify backend service connectivity
 curl http://localhost:5001/health
 curl http://localhost:6000/health
 curl http://localhost:5002/health
@@ -96,136 +97,124 @@ curl http://localhost:7000/health
 
 ### Development Workflow
 ```bash
-# Start development (returns terminal control)
+# Start the development environment (returns terminal control)
 ./dev-local.sh
 
-# Your terminal is now free for other commands
+# Run additional commands while services continue to run
 git status
 npm run build
 docker logs mcp_server
 
-# Stop everything when done
+# Stop all services after development
 ./stop-dev.sh
 ```
 
-## 🛠️ Key Features
+## Key Features
 
-### Infrastructure Management
-- Real-time container monitoring and metrics
-- AI-powered diagnostics and issue resolution
-- Multi-database query performance analysis (PostgreSQL, MySQL, SQLite)
-- Cost analysis and optimization recommendations
+| Category | Feature | Description |
+| --- | --- | --- |
+| Infrastructure Management | Real-time container monitoring | Collect metrics and health insights across application containers. |
+| Infrastructure Management | AI-driven diagnostics | Generate remediation guidance using contextual container and service data. |
+| Infrastructure Management | Multi-database performance analysis | Evaluate and compare PostgreSQL, MySQL, and SQLite workloads. |
+| AI Capabilities | Container diagnostics | Run deep analyses of container logs and status to surface probable causes. |
+| AI Capabilities | Database query optimization | Produce query tuning recommendations and execution plans. |
+| AI Capabilities | Natural language querying | Translate plain-language questions into infrastructure-aware responses. |
+| AI Capabilities | Cost analysis | Identify cost anomalies and provide optimization suggestions. |
+| Visualization | Architecture mapping | Render component relationships and dependencies for situational awareness. |
+| MCP Integration | Standardized data access | Use MCP tooling for consistent database connectivity across engines. |
+| MCP Integration | Container management | Invoke lifecycle management tools through a unified interface. |
+| MCP Integration | Inventory intelligence | Combine natural language requests with inventory data for quick insights. |
 
-### AI-Powered Features
-- **Container Diagnostics**: AI analysis of container health and performance
-- **Database Query Optimization**: Performance analysis across multiple databases
-- **Natural Language Queries**: Ask questions about your infrastructure in plain English
-- **Cost Analysis**: AI-driven spending analysis and optimization recommendations
-- **Architecture Visualization**: System component mapping and relationship diagrams
+## Configuration
 
-### Model Context Protocol (MCP) Integration
-- Standardized database access across all database types
-- Container management and monitoring tools
-- Development update tracking and visibility
-- Inventory management with natural language queries
-- Cost analysis and reporting tools
+### AWS Credentials for AI Features
+The platform integrates with AWS Bedrock. Enable AI functionality by supplying credentials:
 
-## 🔧 Configuration
-
-### AWS Credentials (For AI Features)
-The platform includes AI-powered features using AWS Bedrock. To enable:
-
-1. **Copy environment template:**
+1. Copy the environment template:
    ```bash
    cp .env.example .env
    ```
-
-2. **Add AWS credentials to `.env`:**
+2. Populate AWS credentials in `.env`:
    ```bash
    AWS_ACCESS_KEY_ID=your-access-key-here
    AWS_SECRET_ACCESS_KEY=your-secret-access-key-here
    AWS_SESSION_TOKEN=your-session-token-here-if-using-temporary-credentials
    AWS_REGION=us-east-1
    ```
-
-3. **Refresh credentials if expired:**
+3. Refresh credentials if they expire:
    ```bash
    ./refresh-aws-credentials.sh
    ```
 
-### Port Configuration
-- **3000**: Vite dev server (development with hot reloading)
-- **5001**: MCP Server API
-- **6000**: Bot Core API
-- **5002**: AWS Inventory Service
-- **7000**: Unified Claude Service
-- **5432**: PostgreSQL Database
-- **3306**: MySQL Database
+### Port Allocation
+- 3000: Vite development server
+- 5001: MCP Server API
+- 6000: Bot Core API
+- 5002: AWS Inventory Service
+- 7000: Unified Claude Service
+- 5432: PostgreSQL database
+- 3306: MySQL database
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 sre-genai/
-├── liquid-glass-ui/           # Modern React frontend with Vite
-├── mcp_server/                # Model Context Protocol server
-├── bot_core/                  # AI diagnostics and NLP processing
-├── aws_inventory_service/     # Cloud resource management
-├── unified_claude_service/    # Consolidated AI endpoints
-├── docs/                      # Essential documentation
-├── unused/                    # Archived unused files
-├── slow_query_app/           # Sample app simulating slow queries
-├── connection_leak_app/      # Sample app simulating connection leaks
-├── lock_contention_app/      # Sample app simulating database locks
-├── memory_bloat_app/         # Sample app simulating memory issues
-└── data_seeder/              # Database initialization and sample data
+├── liquid-glass-ui/         # React frontend using Vite
+├── mcp_server/              # Model Context Protocol server implementation
+├── bot_core/                # AI diagnostics and NLP processing services
+├── aws_inventory_service/   # Cloud resource and cost management APIs
+├── unified_claude_service/  # Consolidated AI endpoint gateway
+├── docs/                    # Project documentation
+├── slow_query_app/          # Sample service simulating slow queries
+├── connection_leak_app/     # Sample service simulating connection leaks
+├── lock_contention_app/     # Sample service simulating database locks
+├── memory_bloat_app/        # Sample service simulating memory issues
+└── data_seeder/             # Database initialization utilities
 ```
 
 ### Development Scripts
-- **`dev-local.sh`** - Start development environment (returns terminal control)
-- **`stop-dev.sh`** - Stop all services (Docker + frontend)
-- **`test-deployment.sh`** - Validate deployment requirements
-- **`aws-credentials-manager.sh`** - Manage AWS credentials
-- **`refresh-aws-credentials.sh`** - Refresh expired AWS credentials
+- `dev-local.sh` – Start the development environment
+- `stop-dev.sh` – Stop all services
+- `test-deployment.sh` – Validate deployment requirements
+- `aws-credentials-manager.sh` – Manage AWS credentials
+- `refresh-aws-credentials.sh` – Refresh temporary credentials
 
-## 🤝 Contributing
+## Contributing
+1. Follow the practices outlined in [docs/DEVELOPMENT.md](docs/DEVELOPMENT.md)
+2. Apply the testing workflow in [docs/TESTING_GUIDE.md](docs/TESTING_GUIDE.md)
+3. Consult the troubleshooting guide for common issues before filing bugs
 
-1. Follow the development practices in [docs/DEVELOPMENT.md](docs/DEVELOPMENT.md)
-2. Use the testing procedures in [docs/TESTING_GUIDE.md](docs/TESTING_GUIDE.md)
-3. Check troubleshooting guide for common issues
-
-## �️ Trooubleshooting
+## Troubleshooting
 
 ### Common Issues
 
-**Services won't start:**
+**Services fail to start**
 ```bash
-# Check Docker is running
+# Confirm Docker is running
 docker info
 
-# Restart everything
+# Restart the development environment
 ./stop-dev.sh
 ./dev-local.sh
 ```
 
-**Frontend not updating:**
-- The frontend runs with hot reloading - changes should update automatically
-- If not working, check the terminal where dev-local.sh was run for errors
+**Frontend changes are not visible**
+- The frontend is served with hot reloading; verify the terminal running `dev-local.sh` for compilation errors.
 
-**AI features not working:**
+**AI features are unavailable**
 ```bash
-# Check AWS credentials
+# Validate AWS credentials
 ./aws-credentials-manager.sh check
 
-# Refresh if expired
+# Refresh credentials if necessary
 ./refresh-aws-credentials.sh
 
-# Check unified Claude service
+# Inspect Unified Claude service logs
 docker logs unified_claude
 ```
 
-**Port conflicts:**
-- Make sure ports 3000, 5001, 6000, 5002, 7000 are available
-- Stop other applications using these ports
+**Port conflicts**
+- Confirm that ports 3000, 5001, 6000, 5002, and 7000 are available before starting services.
 
 ### Getting Help
 ```bash
@@ -241,12 +230,11 @@ docker logs unified_claude
 docker-compose ps
 ```
 
-## 📞 Support
-
-- Check the [troubleshooting guide](docs/DEV_LOCAL_TROUBLESHOOTING.md) for detailed solutions
-- Review the [testing guide](docs/TESTING_GUIDE.md) for validation procedures
-- Use `./test-deployment.sh` to validate your setup
+## Support
+- Review [docs/DEV_LOCAL_TROUBLESHOOTING.md](docs/DEV_LOCAL_TROUBLESHOOTING.md) for detailed troubleshooting
+- Follow [docs/TESTING_GUIDE.md](docs/TESTING_GUIDE.md) for validation procedures
+- Run `./test-deployment.sh` to confirm environment readiness
 
 ---
 
-**Note**: This platform demonstrates advanced AI-powered infrastructure management with AWS Strands Agents, Model Context Protocol (MCP), and real AWS Bedrock integration for intelligent database and container management.
+This platform demonstrates an integrated approach to AI-assisted infrastructure management using AWS Strands Agents, the Model Context Protocol, and AWS Bedrock-backed Claude models for intelligent database and container operations.
